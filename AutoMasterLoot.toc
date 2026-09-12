@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: Auto Master Loot
+## Notes: Automatically distributes loot to the Master Looter based on item quality filters.
+## Author: Blackbox
+## Version: 1.0
+## SavedVariables: AutoMasterLootDB
+
+AutoMasterLoot.lua
