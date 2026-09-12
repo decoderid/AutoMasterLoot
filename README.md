@@ -4,6 +4,9 @@ A lightweight, compact, and automated Master Loot solution for World of Warcraft
 
 **Auto Master Loot** is designed to speed up looting during raids and dungeons. When you are the Master Looter, it automatically distributes items matching your selected quality filters directly to yourself upon opening the loot window—saving precious raid time!
 
+<img width="161" height="175" alt="image" src="https://github.com/user-attachments/assets/26e148ba-8761-452d-917e-3f3cc49b36d6" />
+
+
 ## Features
 
 - **Automatic Distribution:** Instantly assigns targeted loot to the Master Looter upon opening the loot window.
