@@ -1,29 +1,50 @@
-# Auto Master Loot (v1.1)
+# Auto Master Loot
 
-Automated Master Loot and Item Roll Tracker for **World of Warcraft: Wrath of the Lich King (Client 3.3.5a / Build 30300)**.
+> A World of Warcraft (3.3.5a) addon designed to streamline raid looting, manage Main Spec (MS) / Off Spec (OS) tracking, and automate item rolling sessions.
 
-## Architecture
+---
 
-The codebase is refactored into modular components:
-- **`AML_Core.lua`**: Database initialization, state management, timer logic, chat notification handling, roll parsing, and automatic loot/trade execution.
-- **`AML_UI.lua`**: Frame construction, drag-and-drop item slots, roll tracker list UI, MS change manager modal, dropdown menus, and custom button state styling.
-- **`AutoMasterLoot.toc`**: Manifest file defining load sequence.
+## Features
 
-## Key Features
+* **Automated Roll Tracking:** Easily manage rolls for MS, OS, DE, or FREE items with an integrated countdown timer.
+* **MS Change Manager:** Track and update player Main Specs and specializations dynamically from party or raid frames.
+* **Class & Spec Colorization:** Fully supports custom class colors (including fixed Death Knight coloring) for clear visual hierarchy.
+* **Session History:** Browse through previous roll sessions and past item distributions via page navigation.
+* **Custom Filters:** Toggle item quality filters and lock UI or configuration states.
 
-1. **Auto Master Looting:** Automatically assigns looted items based on quality filters (Uncommon, Rare, Epic, Legendary).
-2. **Roll Tracker & Timer:** Drag-and-drop items directly into the tracker slot, run 10-second roll countdown timers, track player rolls, and announce winners.
-3. **Manual Paging System:** Keeps historical logs of previous item roll sessions with manual `<` and `>` navigation.
-4. **MS Change Manager:** Track main-spec change requests and broadcast them to group/raid chat.
-5. **Trade Automation:** Automatically inserts won items into the trade window when trading with the winner.
+---
+
+## Screenshots
+<p align="center">
+   <img src="preview/automasterloot.png" width="145" alt="Main Window" />
+   <img src="preview/itemrolltracker.png" width="245" alt="Item Roll Tracker" />
+</p>
+<p align="center">
+     <img src="preview/mschange.png" width="300" alt="MS Change Manager" />
+   <img src="preview/mschange2.png" width="295" alt="MS Change Dropdown" />
+   <img src="preview/mschange3.png" width="300" alt="MS Manager List" />   
+</p>
+
+---
 
 ## Installation
 
-1. Copy the folder `AutoMasterLoot` into your AddOns directory:
-   `World of Warcraft/Interface/AddOns/AutoMasterLoot/`
-2. Verify that all 4 files (`AutoMasterLoot.toc`, `AML_Core.lua`, `AML_UI.lua`, `README.md`) are present inside.
-3. Restart WoW or type `/reload` in-game.
+1. Download or clone this repository.
+2. Extract the folder into your World of Warcraft directory: 
+   `World of Warcraft / Interface / AddOns /`
+3. Ensure the folder name inside `AddOns` is set to **`AutoMasterLoot`**.
+4. Restart your game or reload your UI (`/reload`).
 
-## Commands
+---
 
-- `/aml` — Toggle main GUI interface.
+## Usage
+
+* Type `/aml` or click the minimap/UI toggle button to open the main configuration panel.
+* Drag and drop items into the **Item Roll Tracker** slot to initiate rolling sessions.
+* Use the **MS Change Manager** button to record and view player spec modifications before announcing changes to the raid.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
