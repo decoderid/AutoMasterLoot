@@ -1,8 +1,9 @@
 ## Interface: 30300
-## Title: Auto Master Loot
-## Notes: Automatically distributes loot to the Master Looter based on item quality filters.
-## Author: Blackbox
-## Version: 1.0
+## Title: AutoMasterLoot
+## Notes: Automated Master Loot and Roll Tracker for WotLK 3.3.5a.
+## Author: AutoMasterLoot
+## Version: 1.1
 ## SavedVariables: AutoMasterLootDB
 
-AutoMasterLoot.lua
+AML_Core.lua
+AML_UI.lua

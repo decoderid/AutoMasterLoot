@@ -1,38 +1,29 @@
-# Auto Master Loot (v1.0)
+# Auto Master Loot (v1.1)
 
-A lightweight, compact, and automated Master Loot solution for World of Warcraft: Wrath of the Lich King (3.3.5a).
+Automated Master Loot and Item Roll Tracker for **World of Warcraft: Wrath of the Lich King (Client 3.3.5a / Build 30300)**.
 
-**Auto Master Loot** is designed to speed up looting during raids and dungeons. When you are the Master Looter, it automatically distributes items matching your selected quality filters directly to yourself upon opening the loot window—saving precious raid time!
+## Architecture
 
-<img width="161" height="175" alt="image" src="https://github.com/user-attachments/assets/26e148ba-8761-452d-917e-3f3cc49b36d6" />
+The codebase is refactored into modular components:
+- **`AML_Core.lua`**: Database initialization, state management, timer logic, chat notification handling, roll parsing, and automatic loot/trade execution.
+- **`AML_UI.lua`**: Frame construction, drag-and-drop item slots, roll tracker list UI, MS change manager modal, dropdown menus, and custom button state styling.
+- **`AutoMasterLoot.toc`**: Manifest file defining load sequence.
 
+## Key Features
 
-## Features
-
-- **Automatic Distribution:** Instantly assigns targeted loot to the Master Looter upon opening the loot window.
-- **Custom Quality Filters:** Toggle loot auto-assignment for **Uncommon**, **Rare**, **Epic**, and **Legendary** items.
-- **Clean & Compact GUI:** Minimalist frame interface that fits seamlessly into your WoW UI.
-- **Lock Options (Gear Menu):** Built-in dropdown menu at the bottom-right corner to lock window movement or disable checkbox filters against accidental clicks.
-- **Low Footprint:** Zero external dependencies, clean Lua code, and zero performance impact.
-
-## Commands
-
-- `/aml` — Toggle the main GUI interface on or off.
+1. **Auto Master Looting:** Automatically assigns looted items based on quality filters (Uncommon, Rare, Epic, Legendary).
+2. **Roll Tracker & Timer:** Drag-and-drop items directly into the tracker slot, run 10-second roll countdown timers, track player rolls, and announce winners.
+3. **Manual Paging System:** Keeps historical logs of previous item roll sessions with manual `<` and `>` navigation.
+4. **MS Change Manager:** Track main-spec change requests and broadcast them to group/raid chat.
+5. **Trade Automation:** Automatically inserts won items into the trade window when trading with the winner.
 
 ## Installation
 
-1. Download the latest release `.zip` archive.
-2. Extract the contents and ensure the folder is named exactly `AutoMasterLoot` (remove any `-main` or version suffixes).
-3. Move the `AutoMasterLoot` folder into your WoW directory:
-   `World of Warcraft/Interface/AddOns/`
-4. Confirm the file path looks like:
-   `World of Warcraft/Interface/AddOns/AutoMasterLoot/AutoMasterLoot.lua`
-5. Launch World of Warcraft (3.3.5a) and verify the AddOn is enabled in the character selection screen.
+1. Copy the folder `AutoMasterLoot` into your AddOns directory:
+   `World of Warcraft/Interface/AddOns/AutoMasterLoot/`
+2. Verify that all 4 files (`AutoMasterLoot.toc`, `AML_Core.lua`, `AML_UI.lua`, `README.md`) are present inside.
+3. Restart WoW or type `/reload` in-game.
 
-## Compatibility
+## Commands
 
-- World of Warcraft: Wrath of the Lich King (**Client 3.3.5a / Build 30300**)
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
+- `/aml` — Toggle main GUI interface.
